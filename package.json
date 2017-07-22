@@ -1,0 +1,46 @@
+{
+  "name": "react-native-cloudinary",
+  "version": "1.0.0",
+  "description": "React Native Wrapper for Cloudinary Service",
+  "main": "index.js",
+  "files": [
+    "android",
+    "ios",
+    "index.js",
+    "react-native-ux-cam.podspec"
+  ],
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "react-native"
+  ],
+  "author": "Javier Catalan <jjangelo44@gmail.com> (https://github.com/javierrunning)",
+  "contributors": [
+    {
+      "name": "Javier Catalan",
+      "email": "jjangelo44@gmail.com"
+    }
+  ],
+  "license": "MIT",
+  "repository": {
+    "url": "git+https://github.com/javierrunning/react-native-cloudinary.git",
+    "type": "git"
+  },
+  "bugs": {
+    "url": "https://github.com/javierrunning/react-native-cloudinary/issues"
+  },
+  "homepage": "https://github.com/javierrunning/react-native-cloudinary",
+  "engines": {},
+  "dependencies": {},
+  "devDependencies": {
+    "babel-eslint": "7.0.0",
+    "eslint": "3.8.1"
+  },
+  "peerDependencies": {
+    "react-native": "^0.41.2"
+  },
+  "scripts": {
+    "lint": "eslint ."
+  }
+}
