@@ -39,20 +39,15 @@
 import RNCloudinary from 'react-native-cloudinary';
 
 1. Config
-   ```
    RNCloudinary.config(CLOUD_NAME, API_KEY, API_SECRET, PRESET_NAME);
-   ```
 2. Upload image
     Use the Uri file path for uploading the image to the Cloudinary cloud service.
-
-    ```
     RNCloudinary.uploadImage(filePath).then(data => {
       ...
     })
     .catch(err => {
       ...
     });
-    ```
 
 // TODO: What to do with the module?
 ```
