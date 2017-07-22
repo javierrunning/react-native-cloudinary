@@ -30,8 +30,6 @@
 @implementation RNCloudinary
 @synthesize bridge = _bridge;
 
-//@synthesize cloudinary = _cloudinary;
-
 
 RCT_EXPORT_MODULE();
 
@@ -78,34 +76,6 @@ RCT_EXPORT_METHOD(uploadImage:(NSString *)path resolver:(RCTPromiseResolveBlock)
     reject(code, message, error);
   }
 }
-
-// RCT_EXPORT_METHOD(urlForCurrentUser:(RCTPromiseResolveBlock)resolve
-//                            rejecter:(RCTPromiseRejectBlock)reject) {
-
-//   if (url) {
-//     resolve(url);
-//   } else {
-//     NSString *code = @"no_url";
-//     NSString *message = @"Could not retrieve the url for the current user.";
-//     NSError *error = [NSError errorWithDomain:@"RNUXCam" code:0 userInfo:nil];
-
-//     reject(code, message, error);efwee
-//   }
-// }
-
-// RCT_EXPORT_METHOD(urlForCurrentSession:(RCTPromiseResolveBlock)resolve
-//                               rejecter:(RCTPromiseRejectBlock)reject) {
-
-//   if (url) {
-//     resolve(url);
-//   } else {
-//     NSString *code = @"no_url";
-//     NSString *message = @"Could not retrieve the url for the current session.";
-//     NSError *error = [NSError errorWithDomain:@"RNUXCam" code:0 userInfo:nil];
-
-//     reject(code, message, error);
-//   }
-// }
 
 
 @end

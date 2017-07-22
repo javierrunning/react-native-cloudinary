@@ -8,8 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		D75CDEAB1F2105C800133DAC /* RNCloudinary.m in Sources */ = {isa = PBXBuildFile; fileRef = D75CDEAA1F2105C800133DAC /* RNCloudinary.m */; };
-		D79B560D1F232B68001A2F2E /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D79B560B1F232B68001A2F2E /* Alamofire.framework */; };
-		D79B560E1F232B68001A2F2E /* Cloudinary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D79B560C1F232B68001A2F2E /* Cloudinary.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -28,8 +26,6 @@
 		D75CDE9D1F2105B100133DAC /* libRNCloudinary.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libRNCloudinary.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		D75CDEA91F2105C800133DAC /* RNCloudinary.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RNCloudinary.h; sourceTree = "<group>"; };
 		D75CDEAA1F2105C800133DAC /* RNCloudinary.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RNCloudinary.m; sourceTree = "<group>"; };
-		D79B560B1F232B68001A2F2E /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Frameworks/Alamofire.framework; sourceTree = "<group>"; };
-		D79B560C1F232B68001A2F2E /* Cloudinary.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cloudinary.framework; path = Frameworks/Cloudinary.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -37,8 +33,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D79B560E1F232B68001A2F2E /* Cloudinary.framework in Frameworks */,
-				D79B560D1F232B68001A2F2E /* Alamofire.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -66,8 +60,6 @@
 		D75CDEB41F21270900133DAC /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				D79B560B1F232B68001A2F2E /* Alamofire.framework */,
-				D79B560C1F232B68001A2F2E /* Cloudinary.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -229,13 +221,17 @@
 		D75CDEA71F2105B100133DAC /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ANALYZER_NONNULL = YES_NONAGGRESSIVE;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(SRCROOT)/Frameworks",
 					"$(PROJECT_DIR)/Frameworks",
 					"$(PROJECT_DIR)/../../../ios/Frameworks",
 				);
+				HEADER_SEARCH_PATHS = "$(BUILT_PRODUCTS_DIR)/usr/local/include";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
@@ -245,13 +241,17 @@
 		D75CDEA81F2105B100133DAC /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ANALYZER_NONNULL = YES_NONAGGRESSIVE;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(SRCROOT)/Frameworks",
 					"$(PROJECT_DIR)/Frameworks",
 					"$(PROJECT_DIR)/../../../ios/Frameworks",
 				);
+				HEADER_SEARCH_PATHS = "$(BUILT_PRODUCTS_DIR)/usr/local/include";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
