@@ -30,7 +30,7 @@
     To add cloudinary as a git submodule, run the command:
 
     ```bash
-    $ git submodule add http://git.zemingo.com/Cloudinary/CloudinarySDK-iOS.git
+    $ git submodule add https://github.com/cloudinary/cloudinary_ios.git
     ```
 
     - Drag `Cloudinary.xcodeproj` into the Project Navigator of your application's Xcode project. It should appear under your application's blue project icon.
