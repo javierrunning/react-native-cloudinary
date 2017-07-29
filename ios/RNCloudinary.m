@@ -64,8 +64,8 @@ RCT_EXPORT_METHOD(uploadImage:(NSString *)path resolver:(RCTPromiseResolveBlock)
     completionHandler:^(CLDUploadResult * result, NSError * error) {
         if (error) {
             NSString *code = @"cloudinary error";
-
-            reject(code, @"Cloudinary service returned an error" , error);
+            NSString *message = @"Cloudinary service returned an error.";
+            reject(code, message , error);
         } else {
             resolve([result resultJson]);
         }
