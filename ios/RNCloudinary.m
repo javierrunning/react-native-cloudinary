@@ -61,13 +61,14 @@ RCT_EXPORT_METHOD(uploadImage:(NSString *)path resolver:(RCTPromiseResolveBlock)
   
   if (self.cloudinary) {
     [[self.cloudinary createUploader] uploadWithData:data uploadPreset:self.presetName params:NULL progress:^(NSProgress * progress) {
-      
-    } completionHandler:^(CLDUploadResult * result, NSError * error) {
-      NSArray *keys = [NSArray arrayWithObjects:@"result", @"error", nil];
-      NSArray *objects = [NSArray arrayWithObjects:@"success", @"", nil];
-      NSDictionary *dictionary = [NSDictionary dictionaryWithObjects:objects
-                                                             forKeys:keys];
-      resolve(dictionary);
+    completionHandler:^(CLDUploadResult * result, NSError * error) {
+        if (error) {
+            NSString *code = @"cloudinary error";
+
+            reject(code, @"Cloudinary service returned an error" , error);
+        } else {
+            resolve([result resultJson]);
+        }
     }];
   } else {
     NSString *code = @"not configured";
